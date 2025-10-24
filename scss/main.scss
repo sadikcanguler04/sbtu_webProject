@@ -1,26 +1,232 @@
 /* Ödev gereği özel SASS stilleri */
 
 // Bootstrap'in varsayılan değişkenlerini geçersiz kılma
-// Sivas Bilim ve Teknoloji Üniversitesi logosundaki kırmızıya yakın bir renk
 $primary: #D90429; // Ana Renk (Kırmızı tonu)
 $secondary: #2B2D42; // İkincil Renk (Koyu gri/mavi tonu)
 $light: #f8f9fa;
 $dark: #212529;
 
-// ---- YENİ: Görselleştirme Efekti ----
-// Kartların (Bölümler, Haberler) üzerine gelince büyüme efekti
+// Tema geneli için kullanılacak özel CSS değişkenleri
+:root {
+  --sbt-primary: #4b9ef7;
+  --sbt-secondary: #9b51e0;
+  --sbt-highlight: #ffb347;
+}
+
+// Kartlara etkileşimli gölge ve hareket ekle
 .card {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  
+
   &:hover {
-    transform: translateY(-5px); // Hafifçe yukarı kaydır
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); // Gölgeyi belirginleştir
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
 
-// Slider'daki başlıkların daha okunaklı olması için arkaplan
+// Slider başlıklarının daha okunaklı olması için arkaplan
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 1rem;
+}
+
+// Ana sayfadaki dekoratif vitrin bölümü
+.decorative-highlight {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 179, 71, 0.45), rgba(255, 179, 71, 0)),
+    radial-gradient(circle at 85% 0%, rgba(75, 158, 247, 0.5), rgba(75, 158, 247, 0)),
+    linear-gradient(135deg, rgba(36, 32, 56, 0.92), rgba(28, 63, 122, 0.95));
+  border-radius: 1.5rem;
+  margin-top: -4rem;
+  margin-bottom: 5rem;
+  box-shadow: 0 20px 60px rgba(15, 32, 68, 0.3);
+
+  @media (max-width: 767.98px) {
+    border-radius: 0;
+    margin: 0 -1rem 3rem;
+  }
+
+  .badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    letter-spacing: 0.08em;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: clamp(1.8rem, 2.6vw + 1rem, 3.4rem);
+    line-height: 1.2;
+  }
+
+  p.lead {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 36rem;
+  }
+
+  .text-accent {
+    color: var(--sbt-highlight);
+  }
+
+  .btn-light {
+    color: #1a2b4f;
+    font-weight: 600;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.55);
+    color: #fff;
+
+    &:hover {
+      color: #1a2b4f;
+      background: #fff;
+    }
+  }
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  h5 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      color: rgba(255, 255, 255, 0.85);
+
+      .bi {
+        font-size: 1.25rem;
+        color: var(--sbt-highlight);
+        text-shadow: 0 0 12px rgba(255, 179, 71, 0.6);
+      }
+    }
+  }
+}
+
+.decorative-shape {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(75, 158, 247, 0.5), rgba(155, 81, 224, 0.65));
+  filter: blur(0px);
+  opacity: 0.6;
+  animation: float 16s ease-in-out infinite;
+
+  &-1 {
+    top: -110px;
+    right: -70px;
+  }
+
+  &-2 {
+    bottom: -150px;
+    left: -100px;
+    background: linear-gradient(135deg, rgba(255, 179, 71, 0.4), rgba(155, 81, 224, 0.55));
+    animation-delay: -6s;
+  }
+
+  &-3 {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.12);
+    animation-duration: 20s;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(20px, -20px, 0) scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .decorative-shape {
+    animation: none;
+  }
+}
+
+.section-divider {
+  position: relative;
+  height: 90px;
+  margin-top: -5rem;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #f8f9fc;
+  }
+}
+
+.news-card {
+  border: none;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 18px 32px rgba(15, 32, 68, 0.08);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 50px rgba(15, 32, 68, 0.18);
+  }
+
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+  }
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 1.1rem !important;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(15, 32, 68, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateX(6px);
+    box-shadow: 0 18px 32px rgba(15, 32, 68, 0.16);
+  }
+}
+
+footer {
+  background: linear-gradient(135deg, #1c3f7a, #0d1f3c) !important;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  margin-top: 4rem;
+  color: #fff;
+
+  .small {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 }
