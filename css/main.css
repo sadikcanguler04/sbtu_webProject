@@ -1,24 +1,22 @@
-/* scss/main.scss */
-@import url(c:\Users\220201015\Desktop\YusufGit\sbtu_webProject\css\styles.css);
-.navbar.bg-dark {
-  background-color: #222222 !important;
+@charset "UTF-8";
+/* Ödev gereği özel SASS stilleri */
+.card {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
 
-.btn-primary,
-.badge.bg-primary {
-  background-color: #004a99 !important;
-  border-color: #004a99 !important;
+.card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-a {
-  color: #004a99;
-}
-
-a:hover {
-  color: #003166;
-}
-
-body {
-  background-color: #f8f9fa;
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

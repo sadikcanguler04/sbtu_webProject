@@ -1,41 +1,26 @@
-/* scss/main.scss */
+/* Ödev gereği özel SASS stilleri */
 
-// 1. Şablonun orijinal stillerini (Bootstrap dahil) içeri aktarıyoruz.
-//    Bu, var olan tasarımın üzerine yazmamızı sağlar.
-@import "../css/styles.css";
+// Bootstrap'in varsayılan değişkenlerini geçersiz kılma
+// Sivas Bilim ve Teknoloji Üniversitesi logosundaki kırmızıya yakın bir renk
+$primary: #D90429; // Ana Renk (Kırmızı tonu)
+$secondary: #2B2D42; // İkincil Renk (Koyu gri/mavi tonu)
+$light: #f8f9fa;
+$dark: #212529;
 
-// ----------------------------------------------------
-// ODTÜ & SBTÜ ÖZELLEŞTİRMELERİ
-// ----------------------------------------------------
-
-// 2. Renk Değişkenleri
-$odtu-koyu-gri: #222222; // ODTÜ'nün koyu navbar rengi
-$sbtu-mavi: #004a99;     // SBTÜ'nün kurumsal mavisi
-
-// 3. Navbar'ı ODTÜ Gibi Koyu Yap
-.navbar.bg-dark {
-    background-color: $odtu-koyu-gri !important; 
+// ---- YENİ: Görselleştirme Efekti ----
+// Kartların (Bölümler, Haberler) üzerine gelince büyüme efekti
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px); // Hafifçe yukarı kaydır
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); // Gölgeyi belirginleştir
+  }
 }
 
-// 4. Ana Rengi (Primary) SBTÜ Mavisi Yap
-// Sitedeki tüm "ana" butonlar, linkler ve vurgular bu renk olacak.
-.btn-primary, 
-.badge.bg-primary {
-    background-color: $sbtu-mavi !important;
-    border-color: $sbtu-mavi !important;
-}
-
-// 5. Normal linklerin rengini de değiştirelim
-a {
-    color: $sbtu-mavi;
-}
-
-// Linklerin üzerine gelince (hover) biraz koyulaşsın
-a:hover {
-    color: darken($sbtu-mavi, 10%);
-}
-
-// 6. Arka planı çok hafif gri yapalım (daha modern bir görünüm için)
-body {
-    background-color: #f8f9fa;
+// Slider'daki başlıkların daha okunaklı olması için arkaplan
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 1rem;
 }
