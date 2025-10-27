@@ -28,29 +28,69 @@
             </div>
         </nav>
 
-        <!-- ======================= 2. DUYURU İÇERİĞİ ======================= -->
+        <!-- ======================= 2. DUYURU İÇERİĞİ (YENİ DÜZEN) ======================= -->
         <div class="container px-5 my-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-10">
-                    
+            <div class="row gx-5">
+
+                <!-- Ana İçerik Sütunu -->
+                <div class="col-lg-8">
                     <h1 class="fw-bolder mb-3">YKS Ek Yerleştirme Kayıt</h1>
+
+                    <!-- Meta Bilgisi (Tarih, Kategori vb.) -->
+                    <p class="text-muted mb-3">
+                        <i class="bi bi-calendar-event me-1"></i> 24 Ekim 2025 | 
+                        <span class="ms-2"><i class="bi bi-folder me-1"></i> Duyurular</span>
+                    </p>
+                    <hr>
                     
-                    <section class="mb-4">
+                    <section class="mb-4 fs-5">
                         <p class="lead">2024 YKS Ek Yerleştirme Sonuçlarına Göre Üniversitemize Kayıt Hakkı Kazanan Öğrencilerin Dikkatine.</p>
-                        <p>Kayıt işlemleri 08.10.2024 - 08.21.2024 arasında Öğrenci İşleri Daire Başkanlığı'nda şahsen yapılacaktır.</p>
-                        
-                        <h4 class="fw-bolder mt-4">Kayıt İçin Gerekli Belgeler</h4>
-                        <ul>
-                            <li>YKS Sonuç Belgesi</li>
-                            <li>Lise Diploması</li>
-                            <li>6 Adet Fotoğraf</li>
-                            <li>Kimlk Fotokopisi</li>
-                        </ul>
+                        <p>Kayıt işlemleri <strong>28-30 Ekim 2025</strong> tarihleri arasında Öğrenci İşleri Daire Başkanlığı'nda şahsen yapılacaktır.</p>
+
+                        <!-- Gerekli Belgeler (Güzelleştirilmiş Kutu) -->
+                        <div class="card bg-light border-0 shadow-sm my-4">
+                            <div class="card-body p-4">
+                                <h5 class="fw-bolder mb-3"><i class="bi bi-info-circle-fill text-primary me-2"></i> Kayıt İçin Gerekli Belgeler</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li><i class="bi bi-check-lg text-success me-2"></i>YKS Ek Yerleştirme Sonuç Belgesi (İnternet Çıktısı)</li>
+                                    <li><i class="bi bi-check-lg text-success me-2"></i>Lise Diploması (Aslı veya e-devlet çıktısı)</li>
+                                    <li><i class="bi bi-check-lg text-success me-2"></i>6 Adet Biyometrik Fotoğraf (Son 6 ayda çekilmiş)</li>
+                                    <li><i class="bi bi-check-lg text-success me-2"></i>Nüfus Cüzdanı Fotokopisi</li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
                     
-                    <a href="index.html#duyurular" class="btn btn-primary">Tüm Duyurulara Geri Dön</a>
-
+                    <a href="index.html#duyurular" class="btn btn-primary"><i class="bi bi-arrow-left me-2"></i>Tüm Duyurulara Geri Dön</a>
                 </div>
+
+                <!-- Kenar Çubuğu (Sidebar) Sütunu -->
+                <div class="col-lg-4">
+                    <!-- Diğer Duyurular Kartı -->
+                    <div class="card card-hover mb-4 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bolder mb-3">Diğer Duyurular</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="duyuru-1.html" class="list-group-item list-group-item-action p-3">
+                                    Yatay Geçiş Başvuru Sonuçları
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Son Haberler Kartı -->
+                    <div class="card card-hover mb-4 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bolder mb-3">Son Haberler</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="haber-1.html" class="list-group-item list-group-item-action p-3">
+                                    SBTÜ Teknofest 2024 Başarısı
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
@@ -67,3 +107,4 @@
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
