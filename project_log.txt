@@ -1,0 +1,74 @@
+commit 28b8271c55eee77955f52519864f37ee6ab52d59
+Author: Mehmet Yusuf Ocak <yusuf.ock2611@gmail.com>
+Date:   Mon Oct 27 18:10:47 2025 +0300
+
+    Son hali (Teslim Öncesi)
+
+commit d9ca238f5e86db28b18dbfd9d6fea34e68cf554f
+Author: Mehmet Yusuf Ocak <yusuf.ock2611@gmail.com>
+Date:   Mon Oct 27 18:01:33 2025 +0300
+
+    haberler ve Duyurular sayfası guncellendı
+
+commit fa71db50d752e761e738a733dce4f92a26f8d195
+Author: Mehmet Yusuf Ocak <yusuf.ock2611@gmail.com>
+Date:   Mon Oct 27 17:35:37 2025 +0300
+
+    bölmlere içerikler eklendi
+
+commit 4d92b525b43fde1c5641b8f40336713fec61f461
+Merge: 633e1e3 0030d34
+Author: sadikcanguler04 <sadikcanguler074@gmail.com>
+Date:   Fri Oct 24 18:58:09 2025 +0300
+
+    Merge pull request #1 from sadikcanguler04/codex/add-decorative-elements-to-project
+    
+    Ana sayfa için dekoratif vitrin ekle
+
+commit 0030d343a06ea7181899cd72f20e8cdd2ea32021
+Author: sadikcanguler04 <sadikcanguler074@gmail.com>
+Date:   Fri Oct 24 18:52:03 2025 +0300
+
+    Ana sayfaya dekoratif vitrin bölümü ekle
+
+commit 633e1e39f27f9a075837216aa1ff1d13f2cff691
+Author: YusufOck <yusuf.ock2611@gmail.com>
+Date:   Fri Oct 24 11:59:06 2025 +0300
+
+    En guncel hali
+
+commit 3e677587de6c3fdee3424101b4aae323a194a45a
+Author: YusufOck <yusuf.ock2611@gmail.com>
+Date:   Fri Oct 24 11:26:55 2025 +0300
+
+    bad commit
+
+commit fbc27bb095c7f2555a487fa4f9bc7020421b8e85
+Author: YusufOck <yusuf.ock2611@gmail.com>
+Date:   Fri Oct 24 11:15:50 2025 +0300
+
+    Initial setup: after image
+
+commit e5041219f6aab88136b8c1b4cdf72552f51cf094
+Author: YusufOck <yusuf.ock2611@gmail.com>
+Date:   Fri Oct 24 11:04:02 2025 +0300
+
+    Initial setup: after sass
+
+commit 4cd0a247fce55433a7338344253f3fbe2c045841
+Author: YusufOck <yusuf.ock2611@gmail.com>
+Date:   Fri Oct 24 10:49:52 2025 +0300
+
+    Initial setup: Add Modern Business template
+
+commit d4b53e6c308388e3ada3410e0bf499f8876a5adb
+Author: Mehmet Yusuf Ocak <220201015@sivas.edu.tr>
+Date:   Fri Oct 24 10:26:00 2025 +0300
+
+    Initial setup: Add Modern Business template
+
+commit 0c8197eae202b877eba8cba70bd4c5a2df022d0f
+Author: sadikcanguler04 <sadikcanguler074@gmail.com>
+Date:   Fri Oct 24 10:15:29 2025 +0300
+
+    Initial commit
