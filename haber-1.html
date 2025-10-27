@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBTÜ Teknofest 2024 Başarısı - SBTÜ Projesi</title>
+    
+    <!-- Ana SCSS dosyamız -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- İkonlar -->
+    <link rel="stylesheet" href="http://googleusercontent.com/font/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <main class="flex-shrink-0">
+
+        <!-- ======================= 1. NAVBAR ======================= -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">SBTÜ Tanıtım Sitesi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Ana Sayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="bolumler.html">Bölümler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ======================= 2. HABER İÇERİĞİ (YENİ DÜZEN) ======================= -->
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+                
+                <!-- Ana İçerik Sütunu -->
+                <div class="col-lg-8">
+                    <!-- Haber Başlığı -->
+                    <h1 class="fw-bolder mb-3">SBTÜ Teknofest 2024'te 4 Ödülün Sahibi Oldu</h1>
+                    
+                    <!-- Meta Bilgisi (Tarih, Kategori vb.) -->
+                    <p class="text-muted mb-3">
+                        <i class="bi bi-calendar-event me-1"></i> 27 Ekim 2025 | 
+                        <span class="ms-2"><i class="bi bi-folder me-1"></i> Haberler</span>
+                    </p>
+                    
+                    <!-- Haber Ana Görseli -->
+                    <img class="img-fluid rounded shadow-sm mb-4" src="img/haber1.png" alt="SBTÜ Teknofest 2024" style="width: 100%;">
+
+                    <!-- Haber Metni -->
+                    <section class="mb-4 fs-5">
+                        <p class="lead">Sivas Bilim ve Teknoloji Üniversitesi (SBTÜ) öğrencileri, katıldıkları Teknofest 2024'te büyük bir başarıya imza atarak 4 farklı kategoride ödül kazandı.</p>
+                        <p>Ekiplerimiz, özellikle savunma sanayi ve tarım teknolojileri alanlarında geliştirdikleri yenilikçi projelerle jürinin takdirini topladı. Üniversitemiz, Ar-Ge ve inovasyona verdiği önemin karşılığını bu prestijli yarışmada bir kez daha almış oldu.</p>
+                        
+                        <blockquote class="blockquote fst-italic text-muted my-4 p-3 border-start border-4 border-primary">
+                            "Bu başarı, öğrencilerimizin azmi ve akademisyenlerimizin rehberliği sayesinde elde edilmiştir. Geleceğin teknolojisini üreten bir üniversite olma hedefimize emin adımlarla yürüyoruz."
+                        </blockquote>
+
+                        
+                    
+                    <a href="index.html#haberler" class="btn btn-primary"><i class="bi bi-arrow-left me-2"></i>Tüm Haberlere Geri Dön</a>
+                </div>
+
+                <!-- Kenar Çubuğu (Sidebar) Sütunu -->
+                <div class="col-lg-4">
+                    <!-- Diğer Duyurular Kartı -->
+                    <div class="card card-hover mb-4 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bolder mb-3">Son Duyurular</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="duyuru-1.html" class="list-group-item list-group-item-action p-3">
+                                    Yatay Geçiş Başvuru Sonuçları
+                                </a>
+                                <a href="duyuru-2.html" class="list-group-item list-group-item-action p-3">
+                                    YKS Ek Yerleştirme Kayıt
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bölümler Kartı (Örnek) -->
+                    <div class="card card-hover mb-4 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bolder mb-3">Bölümlerimiz</h5>
+                            <div class="list-group list-group-flush">
+                                <a href="bilgisayar-muh.html" class="list-group-item list-group-item-action p-3">
+                                    Bilgisayar Mühendisliği
+                                </a>
+                                <a href="ee-muh.html" class="list-group-item list-group-item-action p-3">
+                                    Elektrik-Elektronik Müh.
+                                </a>
+                                <a href="makine-muh.html" class="list-group-item list-group-item-action p-3">
+                                    Makine Mühendisliği
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================= 3. FOOTER ======================= -->
+    <footer class="bg-dark py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; SBTÜ 2025</div></div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

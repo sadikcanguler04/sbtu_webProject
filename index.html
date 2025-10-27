@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Üniversite Ana Sayfa</title>
 
+    <!-- Ana CSS dosyamız -->
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- İkonlar (Vizyon kartı için gerekli) -->
+    <link rel="stylesheet" href="http://googleusercontent.com/font/bootstrap-icons.css">
 </head>
-<body class="d-flex flex-column h-100">
+<!-- Düzeltme: d-flex ve min-vh-100 (Sticky footer için) -->
+<body class="d-flex flex-column min-vh-100"> 
     <main class="flex-shrink-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
@@ -21,7 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                        <!-- Düzeltme: Bu sayfa Ana Sayfa olduğu için 'active' eklendi -->
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Ana Sayfa</a></li>
                         <li class="nav-item"><a class="nav-link" href="bolumler.html">Bölümler</a></li>
                         <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                     </ul>
@@ -37,19 +44,19 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/07102025-imeit.jpg" class="d-block w-100" alt="SBTÜ Teknofest 2024">
+                    <img src="img/07102025-imeit.jpg" class="d-block w-100" alt="SBTÜ Teknofest 2024" style="max-height: 550px; object-fit: cover;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Sivas Bilim ve Teknoloji Üniversitesi Teknofest 2024'te 4 Ödülün Sahibi Oldu</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/30062025-Mobil-Yayin.jpg" class="d-block w-100" alt="Tarım Bilimleri Fakültesi">
+                    <img src="img/30062025-Mobil-Yayin.jpg" class="d-block w-100" alt="Tarım Bilimleri Fakültesi" style="max-height: 550px; object-fit: cover;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Tarım Bilimleri ve Teknoloji Fakültesi Öğrencilerinden Büyük Başarı </h5>
+                        <h5>Tarım Bilimleri ve Teknoloji Fakültesi Öğrencilerinden Büyük Başarı</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/tarimsal-bolum-banner.png" class="d-block w-100" alt="Geleceğin Liderleri">
+                    <img src="img/tarimsal-bolum-banner.png" class="d-block w-100" alt="Geleceğin Liderleri" style="max-height: 550px; object-fit: cover;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>SBTÜ’de Geleceğin Liderleri Yetişiyor</h5>
                     </div>
@@ -81,7 +88,8 @@
                         </div>
                     </div>
                     <div class="col-lg-5">
-                        <div class="highlight-card">
+                        <!-- GÜNCELLEME: .card-hover sınıfı eklendi -->
+                        <div class="highlight-card card-hover">
                             <h5>2025 Vizyonu</h5>
                             <ul class="list-unstyled mb-0">
                                 <li><i class="bi bi-stars"></i> Öğrenci projelerinde %40 artış</li>
@@ -104,26 +112,34 @@
             <div class="container px-5 my-5">
                 <div class="row gx-5">
                     <div class="col-lg-6">
-                        <h2 class="fw-bolder mb-4">Haberler</h2>
-                        <div class="card mb-4 news-card">
+                        <!-- GÜNCELLEME: id="haberler" eklendi -->
+                        <h2 class="fw-bolder mb-4" id="haberler">Haberler</h2>
+                        <!-- GÜNCELLEME: .card-hover sınıfı eklendi -->
+                        <div class="card mb-4 news-card card-hover">
                             <img src="img/haber1.png" class="card-img-top" alt="Teknofest Haberi">
                             <div class="card-body">
-                                <h5 class="card-title">SBTÜ Teknofest 2024'te 4 Ödülün Sahibi Oldu</h5>
+                                <!-- GÜNCELLEME: Başlık, haber-1.html'ye linklendi -->
+                                <h5 class="card-title">
+                                    <a href="haber-1.html" class="text-decoration-none" style="color: inherit;">SBTÜ Teknofest 2024'te 4 Ödülün Sahibi Oldu</a>
+                                </h5>
                                 <p class="card-text">Rektörümüz Prof. Dr. Mehmet KUL, 30 Ağustos Zafer Bayramı’nı Kutladı.</p>
                                 <a href="#" class="btn btn-primary">Tüm Haberler</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <h2 class="fw-bolder mb-4">Duyurular</h2>
+                        <!-- GÜNCELLEME: id="duyurular" eklendi -->
+                        <h2 class="fw-bolder mb-4" id="duyurular">Duyurular</h2>
                         <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action">
+                            <!-- GÜNCELLEME: href="duyuru-1.html" olarak değiştirildi -->
+                            <a href="duyuru-1.html" class="list-group-item list-group-item-action">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">Yatay Geçiş Başvuru Sonuçları</h5>
                                 </div>
                                 <p class="mb-1">2024-2025 Eğitim-Öğretim Yılı Güz Yarıyılı Kurumlar Arası Yatay Geçiş (GANO) Başvuru Sonuçları</p>
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action">
+                            <!-- GÜNCELLEME: href="duyuru-2.html" olarak değiştirildi -->
+                            <a href="duyuru-2.html" class="list-group-item list-group-item-action">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">YKS Ek Yerleştirme Kayıt</h5>
                                 </div>
@@ -144,6 +160,8 @@
         </div>
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GÜNCELLEME: CDN script yerine yerel js/bootstrap.bundle.min.js kullanıldı -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

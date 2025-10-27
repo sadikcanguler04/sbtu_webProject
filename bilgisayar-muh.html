@@ -15,7 +15,6 @@
     <main class="flex-shrink-0">
 
         <!-- ======================= 1. NAVBAR ======================= -->
-        <!-- Navbar'ı kopyalıyoruz, ancak 'Bölümler' linkini 'active' yapıyoruz -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="index.html">SBTÜ Tanıtım Sitesi</a>
@@ -25,7 +24,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-                        <!-- Bu sayfa 'Bölümler'in bir alt sayfası olduğu için burayı 'active' yaptık -->
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="bolumler.html">Bölümler</a></li>
                         <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                     </ul>
@@ -36,23 +34,18 @@
         <!-- ======================= 2. BÖLÜM İÇERİĞİ ======================= -->
         <div class="container px-5 my-5">
             <div class="row gx-5 justify-content-center">
-                <div class="col-lg-10"> <!-- İçeriği ortalamak için 10'luk sütun -->
+                <div class="col-lg-10"> 
                     
-                    <!-- Bölüm Başlığı -->
                     <h1 class="fw-bolder text-center mb-3">Bilgisayar Mühendisliği</h1>
                     
-                    <!-- Bölüm Ana Görseli (bolumler.html'deki ile aynı) -->
-                    <!-- DİĞER BÖLÜMLER İÇİN BU GÖRSELİ DEĞİŞTİR -->
                     <img class="img-fluid rounded shadow-sm mb-4" src="assets/img/indir.jpg" alt="Bilgisayar Mühendisliği" style="width: 100%; max-height: 400px; object-fit: cover;">
 
-                    <!-- Bölüm Tanıtım Metni -->
                     <section class="mb-4">
                         <h2 class="fw-bolder h4 mb-3">Bölüm Hakkında</h2>
                         <p class="lead">Sivas Bilim ve Teknoloji Üniversitesi Bilgisayar Mühendisliği Bölümü, yenilikçi eğitim anlayışı ile öne çıkmaktadır. Bölümümüz, öğrencilerine yapay zeka, siber güvenlik, yazılım geliştirme ve veri bilimi gibi güncel alanlarda güçlü bir temel sunmayı amaçlamaktadır.</p>
                         <p>Öğrencilerimiz, modern laboratuvarlarımızda teorik bilgilerini pratiğe dökme fırsatı bulur ve sektörle iç içe projelerde yer alarak mezuniyet sonrası kariyere hazırlanırlar.</p>
                     </section>
 
-                    <!-- İki Sütunlu Alan (Misyon & Vizyon / Akademik Kadro) -->
                     <div class="row gx-5">
                         <div class="col-md-6">
                             <h3 class="fw-bolder h5 mb-3">Misyon</h3>
@@ -63,15 +56,17 @@
                         </div>
                         
                         <div class="col-md-6">
-                            <!-- Akademik Kadro için 'card-hover' sınıfını yine kullanıyoruz -->
+                            <!-- AKADEMİK KADRO GÜNCELLENDİ -->
                             <div class="card h-100 card-hover">
                                 <div class="card-body p-4">
-                                    <h3 class="fw-bolder h5 mb-3">Akademik Kadro (Örnek)</h3>
+                                    <h3 class="fw-bolder h5 mb-3">Akademik Kadro (Resmi Siteden)</h3>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Prof. Halit Bakı<img src="" alt="" sizes="" srcset=""> (Bölüm Başkanı)</li>
-                                        <li class="list-group-item">Doç. Dr. Rezzan Bakır</li>
-                                        <li class="list-group-item">Dr. Öğr. Üyesi </li>
-                                        <li class="list-group-item">Arş. Gör. Zeynep Demir</li>
+                                        <li class="list-group-item">Doç. Dr. Halit Bakır</li>
+                                        <li class="list-group-item">Dr. Öğr. Üyesi Nurbanu Güzey</li>
+                                        <li class="list-group-item">Dr. Öğr. Üyesi Celal Alagöz (Bölüm Bşk. Yrd.)</li>
+                                        <li class="list-group-item">Arş. Gör. Mehmet Kurnaz</li>
+                                        <li class="list-group-item">Arş. Gör. Muhammed Furkan Gül</li>
+                                        <li class="list-group-item"><i>(ve diğer öğretim üyeleri...)</i></li>
                                     </ul>
                                 </div>
                             </div>
@@ -92,7 +87,7 @@
         </div>
     </footer>
     
-    <!-- Bootstrap JS -->
-    <script src="http://googleusercontent.com/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
