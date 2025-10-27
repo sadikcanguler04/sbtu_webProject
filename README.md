@@ -84,7 +84,7 @@ After completing the website, we published it using **GitHub Pages**.
 This allows public access to the site directly through the repository.  
 The deployed site link is also provided in the README once live.
 
-🔗 **Live Website:** *(Add your GitHub Pages link here)*
+🔗 **Live Website:** *https://sadikcanguler04.github.io/sbtu_webProject/
 
 ---
 
