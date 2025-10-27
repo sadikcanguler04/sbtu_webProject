@@ -4,12 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Bölümler - SBTÜ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/custom.css" rel="stylesheet" />
+    
+    <!-- Ana CSS dosyamız -->
+    <link href="css/main.css" rel="stylesheet" />
+
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column min-vh-100">
     <main class="flex-shrink-0">
+        
+        <!-- ======================= 1. NAVBAR ======================= -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
                 <a class="navbar-brand" href="index.html">SBTÜ Tanıtım Sitesi</a>
@@ -19,13 +22,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-                        <li class="nav-item"><a class="nav-link" href="bolumler.html">Bölümler</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="bolumler.html">Bölümler</a></li>
                         <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <!-- ======================= 2. BÖLÜMLER İÇERİĞİ ======================= -->
         <section class="py-5">
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
@@ -34,34 +38,47 @@
                 </div>
                 <div class="row gx-5">
                     
+                    <!-- KART 1: BİLGİSAYAR MÜHENDİSLİĞİ (DÜZELTİLDİ) -->
                     <div class="col-lg-4 mb-5">
-                        <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/slider1.jpg" alt="Bilgisayar Mühendisliği" />
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bolder mb-3">Bilgisayar Mühendisliği</h5>
-                                <p class="card-text mb-0">Yapay zeka, siber güvenlik ve yazılım geliştirme alanlarında uzmanlaşın.</p>
+                        <!-- DEĞİŞİKLİK: Link 'bilgisayar-muh.html' olarak düzeltildi -->
+                        <a href="bilgisayar-muh.html" class="text-decoration-none text-dark">
+                            <div class="card h-100 shadow border-0 card-hover">
+                                <!-- DEĞİŞİKLİK: Doğru resim eklendi -->
+                                <img class="card-img-top" src="assets/img/indir.jpg" alt="Bilgisayar Mühendisliği" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bolder mb-3">Bilgisayar Mühendisliği</h5>
+                                    <p class="card-text mb-0">Yapay zeka, siber güvenlik ve yazılım geliştirme alanlarında uzmanlaşın.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
+                    <!-- KART 2: ELEKTRİK-ELEKTRONİK (DÜZELTİLDİ) -->
                     <div class="col-lg-4 mb-5">
-                        <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/slider3.jpg" alt="Elektrik-Elektronik Mühendisliği" />
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bolder mb-3">Elektrik-Elektronik Mühendisliği</h5>
-                                <p class="card-text mb-0">Haberleşme, gömülü sistemler ve güç elektroniği üzerine odaklanın.</p>
+                        <!-- DEĞİŞİKLİK: Yorum satırı kaldırıldı ve link aktifleştirildi -->
+                        <a href="ee-muh.html" class="text-decoration-none text-dark">
+                            <div class="card h-100 shadow border-0 card-hover">
+                                <!-- DEĞİŞİKLİK: Hatalı 'weight' ve 'height' nitelikleri kaldırıldı -->
+                                <img class="card-img-top" src="assets/img/indir (1).jpg" alt="Elektrik-Elektronik Mühendisliği" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bolder mb-3">Elektrik-Elektronik Mühendisliği</h5>
+                                    <p class="card-text mb-0">Haberleşme, gömülü sistemler ve güç elektroniği üzerine odaklanın.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
+                    <!-- KART 3: MAKİNE (Zaten Doğruydu) -->
                     <div class="col-lg-4 mb-5">
-                        <div class="card h-100 shadow border-0">
-                            <img class="card-img-top" src="img/slider2.jpg" alt="Makine Mühendisliği" />
-                            <div class="card-body p-4">
-                                <h5 class="card-title fw-bolder mb-3">Makine Mühendisliği</h5>
-                                <p class="card-text mb-0">Robotik, otomasyon ve savunma sanayi sistemleri üzerine eğitim alın.</p>
+                       <a href="makine-muh.html" class="text-decoration-none text-dark">
+                            <div class="card h-100 shadow border-0 card-hover">
+                                <img class="card-img-top" src="assets/img/indir (2).jpg" alt="Makine Mühendisliği" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title fw-bolder mb-3">Makine Mühendisliği</h5>
+                                    <p class="card-text mb-0">Robotik, otomasyon ve savunma sanayi sistemleri üzerine eğitim alın.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
@@ -69,6 +86,7 @@
         </section>
     </main>
     
+    <!-- ======================= 3. FOOTER ======================= -->
     <footer class="bg-dark py-4 mt-auto">
         <div class="container px-5">
             <div class="row align-items-center justify-content-between flex-column flex-sm-row">
@@ -77,6 +95,8 @@
         </div>
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DEĞİŞİKLİK: CDN script yerine yerel script (diğer sayfalarla aynı) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

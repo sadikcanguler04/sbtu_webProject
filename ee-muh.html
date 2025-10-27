@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrik-Elektronik Mühendisliği - SBTÜ Projesi</title>
+    
+    <!-- Ana SCSS dosyamız -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- İkonlar -->
+    <link rel="stylesheet" href="http://googleusercontent.com/font/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <main class="flex-shrink-0">
+
+        <!-- ======================= 1. NAVBAR ======================= -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">SBTÜ Tanıtım Sitesi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                        <!-- Bu sayfa 'Bölümler'in bir alt sayfası olduğu için burayı 'active' yaptık -->
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="bolumler.html">Bölümler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ======================= 2. BÖLÜM İÇERİĞİ ======================= -->
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-10"> <!-- İçeriği ortalamak için 10'luk sütun -->
+                    
+                    <!-- Bölüm Başlığı -->
+                    <h1 class="fw-bolder text-center mb-3">Elektrik-Elektronik Mühendisliği</h1>
+                    
+                    <!-- Bölüm Ana Görseli (bolumler.html'deki karttan) -->
+                    <img class="img-fluid rounded shadow-sm mb-4" src="assets/img/indir (1).jpg" alt="Elektrik-Elektronik Mühendisliği" style="width: 100%; max-height: 400px; object-fit: cover;">
+
+                    <!-- Bölüm Tanıtım Metni -->
+                    <section class="mb-4">
+                        <h2 class="fw-bolder h4 mb-3">Bölüm Hakkında</h2>
+                        <p class="lead">Bölümümüz, öğrencilerine haberleşme, gömülü sistemler ve güç elektroniği gibi alanlarda derinlemesine bilgi sağlamaktadır. Sektörün ihtiyaç duyduğu nitelikli mühendisleri yetiştirmeyi hedefler.</p>
+                        <p>Savunma sanayi ve enerji sektörü başta olmak üzere, ulusal teknoloji hamlelerine katkı sağlayacak projelerde yer alarak, öğrencilerimize teorik bilginin yanı sıra güçlü bir pratik altyapı sunuyoruz.</p>
+                    </section>
+
+                    <!-- İki Sütunlu Alan (Misyon & Vizyon / Akademik Kadro) -->
+                    <div class="row gx-5">
+                        <div class="col-md-6">
+                            <h3 class="fw-bolder h5 mb-3">Misyon</h3>
+                            <p>Evrensel bilim ve teknolojiye katkı sağlayan, yenilikçi ve girişimci ruha sahip, alanında yetkin Elektrik-Elektronik mühendisleri yetiştirmek.</p>
+                            
+                            <h3 class="fw-bolder h5 mt-4 mb-3">Vizyon</h3>
+                            <p>Ulusal ve uluslararası alanda tanınan, Ar-Ge projeleriyle öncü ve tercih edilen bir bölüm olmaktır.</p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card h-100 card-hover">
+                                <div class="card-body p-4">
+                                    <h3 class="fw-bolder h5 mb-3">Akademik Kadro (Örnek)</h3>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Prof. Dr. Ayşe Çetin (Bölüm Başkanı)</li>
+                                        <li class="list-group-item">Doç. Dr. Burak Sönmez</li>
+                                        <li class="list-group-item">Dr. Öğr. Üyesi Fatma Yıldız</li>
+                                        <li class="list-group-item">Arş. Gör. Ali Vural</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ======================= 3. FOOTER ======================= -->
+    <footer class="bg-dark py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; SBTÜ 2025</div></div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="http://googleusercontent.com/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

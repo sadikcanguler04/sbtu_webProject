@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Üniversite Projesi</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="stylesheet" href="http://googleusercontent.com/font/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100"> <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.png" alt="Üniversite Logo" style="height: 40px;" class="d-inline-block align-text-top me-2"> Üniversite Projesi
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bolumler.html">Bölümler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="iletisim.html">İletişim</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <h1 class="text-center mb-5">Bizimle İletişime Geçin</h1>
+      
+      <div class="row g-5"> <div class="col-lg-6">
+          
+          <h3 class="mb-3">İletişim Bilgileri</h3>
+          
+          <div class="d-flex mb-3">
+            <i class="bi bi-geo-alt-fill fs-4 text-primary me-3"></i>
+            <div>
+              <strong>Adres:</strong>
+              <p class="mb-0">Gültepe Mahallesi, Mecnun Otyakmaz Caddesi No:1 Merkez/Sivas</p>
+            </div>
+          </div>
+
+         <div class="iletisim-bilgi-satiri">
+             <i class="bi bi-geo-alt-fill"></i>
+            <div>
+                <strong>Adres:</strong>
+                <p class="mb-0">Gültepe Mahallesi, Mecnun Otyakmaz Caddesi No:1 Merkez/Sivas</p>
+            </div>
+        </div>
+
+        <div class="iletisim-bilgi-satiri">
+        <i class="bi bi-telephone-fill"></i>
+        <div>
+            <strong>Telefon:</strong>
+            <p class="mb-0">(+90 346) 219 13 98</p>
+        </div>
+        </div>
+
+        <div class="iletisim-bilgi-satiri">
+        <i class="bi bi-envelope-fill"></i>
+        <div>
+            <strong>E-posta:</strong>
+            <p class="mb-0">info@universite.edu.tr</p>
+        </div>
+        </div>
+          
+          <hr class="my-4">
+
+          <h3 class="mb-3">İletişim Formu</h3>
+          <form>
+            <div class="mb-3">
+              <label for="contactName" class="form-label">Adınız Soyadınız</label>
+              <input type="text" class="form-control" id="contactName" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">E-posta Adresiniz</label>
+              <input type="email" class="form-control" id="contactEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="contactSubject" class="form-label">Konu</label>
+              <input type="text" class="form-control" id="contactSubject">
+            </div>
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Mesajınız</label>
+              <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Mesajı Gönder</button>
+          </form>
+        </div>
+
+        <div class="col-lg-6">
+    
+            <h3 class="mb-3">GÜNCEL</h3>
+            <img src="assets/img/07102025-imeit.jpg" class="img-fluid rounded shadow-sm mb-4" alt="Kampüs Görseli">
+
+            
+            <h3 class="mb-3">Konumumuz</h3>
+            <div class="ratio ratio-16x9 rounded shadow-sm">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Sivas%20Bilim%20ve%20Teknoloji%20%C3%9Cniversitesi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light p-4 mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Hızlı Erişim</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-light text-decoration-none">Ana Sayfa</a></li>
+              <li><a href="bolumler.html" class="text-light text-decoration-none">Bölümler</a></li>
+              <li><a href="iletisim.html" class="text-light text-decoration-none">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>İletişim</h5>
+            <p class="mb-0">Gültepe Mahallesi, Mecnun Otyakmaz Caddesi No:1 Merkez/Sivas</p>
+            <p>info@universite.edu.tr</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Sosyal Medya</h5>
+            <p>Bizi takip edin!</p>
+          </div>
+        </div>
+        <hr class="my-3">
+        <p class="text-center mb-0">© 2024 Üniversite Projesi. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,26 +1,219 @@
-/* Ödev gereği özel SASS stilleri */
+/*
+ * SAYFALARI GÜZELLEŞTİRME (SCSS)
+ * 'Live Sass Compiler' eklentisinin çalıştığından emin ol.
+ */
 
-// Bootstrap'in varsayılan değişkenlerini geçersiz kılma
-// Sivas Bilim ve Teknoloji Üniversitesi logosundaki kırmızıya yakın bir renk
-$primary: #D90429; // Ana Renk (Kırmızı tonu)
-$secondary: #2B2D42; // İkincil Renk (Koyu gri/mavi tonu)
-$light: #f8f9fa;
-$dark: #212529;
+/* 1. GÜZEL FONT'LARI İÇE AKTAR (CSS Import) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
-// ---- YENİ: Görselleştirme Efekti ----
-// Kartların (Bölümler, Haberler) üzerine gelince büyüme efekti
-.card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  
-  &:hover {
-    transform: translateY(-5px); // Hafifçe yukarı kaydır
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); // Gölgeyi belirginleştir
-  }
+/* 2. BOOTSTRAP'I ÖZELLEŞTİRME (DEĞİŞKENLER) */
+/* * Bootstrap'ın varsayılanlarını ezmek için, import'tan ÖNCE tanımlanmalılar.
+ * Raporun istediği 'color changes, font settings' bu bölümde yapılır.
+ */
+
+// Ana Renk Paleti
+$primary: #005A9C; // Bootstrap'ın ana $primary rengini $koyu-mavi yap
+$koyu-mavi: #005A9C; // Kendi kullanımımız için de tanımlayalım
+$koyu-gri: #2c3e50;
+$acik-gri: #f8f9fa;
+
+// Fontları Değiştir
+$font-family-base: 'Roboto', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
+
+/* * 3. BOOTSTRAP'I İÇE AKTAR (SASS IMPORT)
+ * !!! EN ÖNEMLİ KISIM BU !!!
+ * 'Live Sass Compiler'ın uyarı verdiği @import kuralı budur.
+ * Ancak bu, Bootstrap'ın çalışması için GEREKLİDİR.
+ * * Lütfen bu dosya yolunun, senin 'bootstrap-scss' klasörünün
+ * konumuyla eşleştiğinden emin ol.
+ */
+@import "../bootstrap-scss/bootstrap"; 
+// VEYA klasör adın 'bootstrap' ve içinde 'scss' ise:
+// @import "../bootstrap/scss/bootstrap";
+
+
+/* 4. GENEL SAYFA STİLLERİ (Bootstrap'tan Sonra) */
+body {
+    font-family: 'Roboto', sans-serif; // Varsayılan yazı tipi
+    line-height: 1.6;
+    background-color: #fdfdfd; // Saf beyaz yerine çok hafif kırık beyaz
 }
 
-// Slider'daki başlıkların daha okunaklı olması için arkaplan
+// Tüm başlıkları daha şık bir fontla değiştir
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: $koyu-gri;
+}
+
+/* 5. NAVBAR'I GÜZELLEŞTİRME (Bootstrap'ı Ezme) */
+.navbar {
+    // Navbar'a yumuşak bir gölge ekle
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+}
+
+// Aktif olan menü linkini belirgin yap
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 2px solid #fff; // Altına beyaz bir çizgi
+    padding-bottom: 6px; // Çizgi için yer aç
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f0f0f0; // Hafif soluklaştır
+}
+
+/* 6. SLIDER (CAROUSEL) GÜZELLEŞTİRME (index.html) */
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  padding: 1rem;
+    // Şık gradyan arka plan
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 2.5rem; // Daha ferah
+}
+
+.carousel-caption h5 {
+    font-size: 2.5rem; // Başlığı büyüt
+    font-weight: 700;
+    // Metne gölge ekle ki fotoğraftan bağımsız okunsun
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* 7. DİNAMİK KARTLAR (card-hover) */
+// Bu sınıfı index.html'deki 'highlight-card' ve 'news-card'a ekledik.
+.card-hover {
+    transition: all 0.3s ease; // Yavaş ve yumuşak geçiş
+    border: none; // Kart sınırını kaldır
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); // Yumuşak bir gölge
+}
+
+.card-hover:hover {
+    transform: translateY(-8px); // Üzerine gelince 8px yukarı kaydır
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); // Gölgeyi belirginleştir
+}
+
+/* 8. BUTONLARI EZME (Override) */
+// Bu, .btn-primary sınıfını kullanan tüm butonları etkileyecek
+.btn-primary {
+    background-color: $koyu-mavi; // Ana rengimizi ata
+    border-color: $koyu-mavi;
+    font-weight: 500;
+    padding: 0.6rem 1.25rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: darken($koyu-mavi, 10%); // SCSS fonksiyonu ile %10 koyulaştır
+    border-color: darken($koyu-mavi, 10%);
+    transform: translateY(-2px); // Hafifçe yükselt
+    box-shadow: 0 4px 10px rgba($koyu-mavi, 0.3); // Kendi renginde gölge ver
+}
+
+/* 9. İLETİŞİM SAYFASI GÜZELLEŞTİRME */
+// İkonların ve bilgilerin daha hizalı ve şık görünmesi için
+.iletisim-bilgi-satiri {
+    display: flex;
+    align-items: flex-start; // İkonları üste hizala
+    margin-bottom: 1.25rem;
+    
+    i { // SCSS'in nesting (iç içe yazma) özelliği
+        font-size: 1.75rem;
+        color: $koyu-mavi; // Ana rengimizi kullan
+        margin-right: 1rem;
+        width: 30px; // İkonlar için sabit genişlik
+    }
+    
+    div {
+        strong {
+            font-size: 1.1rem;
+            color: $koyu-gri;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* 10. INDEX.HTML'DEKİ YENİ ALANLAR İÇİN EKSTRA GÜZELLEŞTİRMELER */
+
+// 'Duyurular' listesine animasyon ekle
+.list-group-item-action {
+    transition: all 0.2s ease-in-out;
+    border-right: none;
+    border-left: none;
+    border-color: #eee;
+    padding-top: 1.25rem; // Daha ferah
+    padding-bottom: 1.25rem;
+
+    &:hover { // SCSS nesting
+        transform: translateX(5px); // Hafifçe sağa kaydır
+        background-color: #fcfcfc;
+        color: $koyu-mavi; // Ana rengimizi ver
+        border-left: 4px solid $koyu-mavi; // Soluna renkli bir çizgi çek
+    }
+}
+
+// 'Vurgu' bölümünü ana renklerimizle eşleştir
+.decorative-highlight {
+    background-color: $koyu-mavi; // Arka planı ana rengimiz yap
+    color: #fff;
+    overflow: hidden; // Şekillerin taşmasını engelle
+    
+    h2, .lead {
+        color: #fff; // Başlık ve metni beyaz yap
+    }
+
+    .badge {
+        background-color: rgba(255,255,255, 0.2); // Yarı şeffaf beyaz badge
+        color: #fff;
+        font-size: 1rem;
+        padding: 0.5em 1em;
+        font-weight: 500;
+    }
+
+    .text-accent {
+        color: #B3E5FC; // 'SBTÜ' yazısını açık mavi yap
+    }
+
+    // Vizyon kartını da güzelleştir
+    .highlight-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px); // "Buzlu cam" efekti
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        color: #fff;
+
+        h5 { color: #fff; }
+        i { color: #B3E5FC; margin-right: 10px; } // İkonları renklendir
+    }
+    
+    // index.html'deki dekoratif şekiller
+    .decorative-shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        z-index: 0;
+    }
+    .decorative-shape-1 { width: 100px; height: 100px; top: -20px; left: -30px; }
+    .decorative-shape-2 { width: 200px; height: 200px; bottom: -50px; right: -50px; }
+    .decorative-shape-3 { width: 50px; height: 50px; top: 40%; left: 50%; }
+}
+
+// Dalgalı ayracın rengini ayarla
+.section-divider {
+    background-color: $koyu-mavi; // Üstteki bölümle aynı renk
+    line-height: 0; // Boşlukları kaldır
+    
+    svg path {
+        fill: #fdfdfd; // Alttaki bölümün arka plan rengi (body'deki)
+    }
 }
